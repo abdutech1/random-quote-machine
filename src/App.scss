@@ -1,0 +1,104 @@
+
+$primary-bg-color: #3498db; 
+$text-color: #fff; 
+
+@mixin transition($property, $duration: 0.5s, $timing-function: ease) {
+  transition: $property $duration $timing-function;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $primary-bg-color; 
+  @include transition(background-color); 
+}
+
+#quote-box {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 40px;
+  max-width: 600px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative; 
+  box-sizing: border-box; 
+}
+
+.quote-text {
+  font-size: 1.8em;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  color: $text-color; 
+  @include transition(color); 
+  .fa-quote-left {
+    margin-right: 10px;
+    font-size: 0.8em;
+  }
+}
+
+.quote-author {
+  font-size: 1.2em;
+  font-style: italic;
+  margin-bottom: 30px;
+  color: $text-color; 
+  @include transition(color); 
+}
+
+.quote-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .tweet-quote,
+  .new-quote {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    @include transition(background-color);
+  }
+
+  .tweet-quote {
+    background-color: #1da1f2; 
+    color: #fff;
+    .fa-twitter {
+      margin-right: 8px;
+    }
+  }
+
+  .new-quote {
+    background-color: $primary-bg-color; 
+    color: #fff;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #quote-box {
+    margin: 20px;
+    padding: 30px;
+  }
+  .quote-text {
+    font-size: 1.5em;
+  }
+  .quote-author {
+    font-size: 1em;
+  }
+}
+.name{
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  margin-top: 20px;
+}
