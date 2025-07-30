@@ -2,7 +2,7 @@
   "name": "random-quote-machine",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/abdutech1/random-quote-machine.git",
+  "homepage": "https://abdutech1.github.io/random-quote-machine/",
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
